@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
+
+.body{
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: rgb(143, 142, 140);
+  margin: auto;
+  color: black;
+}
+
+.button{
+  width: 150px;
+  height: 33px;
+  background-color: rgb(116, 156, 190);
+  color: black;
+  font-style:bold;
+  font-size: larger;
+  font-family: Lobster;
+  border-radius: 8px;
+  padding: 2px;
+  margin-left: 10px;
+}
+
+.font{
+  font-family: Lobster;
+}
+
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  text-align: center;
+}
+
+.img{
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.li{
+  display: flex;
+  margin-left: 8px;
+  flex-direction: column;
+  white-space: normal;
+}
+.input{
+  width: 150px;
+  height: 30px;
+  background-color: aliceblue;
+  color: black;
+  font-style:bold;
+  font-size: larger;
+  font-family: “Segoe UI”,”Arial”,”Times New Roman”;
+  border-radius: 8px;
+}
+
+.input:focus{
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
