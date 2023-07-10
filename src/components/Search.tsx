@@ -15,12 +15,13 @@ export default function Search() {
       const url = `https://dummyjson.com/products/${id || 'default'}`;
       const response = await fetchProducts(url);
       if (response) {
-        void setSearch(response);
+        // Converter de Products para Product
+        const convertedResponse: Product = response as unknown as Product;
+        void setSearch(convertedResponse);
       }
     }
     void fetchData();
   }, [id]);
-  console.log(search);
 
   const returnRouterHome = () => {
     navigateTo('/');

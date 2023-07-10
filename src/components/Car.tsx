@@ -9,8 +9,12 @@ export default function Car() {
 
   useEffect(() => {
     const car = () => {
-      const store: string | unknown = localStorage.getItem('search');
-      void setLocal(JSON.parse(store));
+      const store = localStorage.getItem('search');
+      // Verificar se store é nulo e converter para uma string vazia
+      const storeValue = store !== null ? store : '';
+  
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+      void setLocal(JSON.parse(storeValue));
     };
     car();
   }, []);
