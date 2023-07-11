@@ -28,7 +28,7 @@ function App() {
   const handleChange = (value: string): void => {
     if (count?.products?.length && value.length > 0) {
       const data: Products = {
-        products: count.products.filter(p => p.category.includes(value))
+        products: count.products.filter(p => p.category.includes(value.toLowerCase()))
       };
       setCount(data);
     } else if (value.length === 0) {

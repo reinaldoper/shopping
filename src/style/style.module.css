@@ -34,6 +34,17 @@
   text-align: center;
 }
 
+.lists{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 10px;
+  height: 20px;
+  width: 80vh;
+}
+
+
+
 .img{
   width: 250px;
   height: 250px;
@@ -46,6 +57,25 @@
   margin-left: 8px;
   flex-direction: column;
   white-space: normal;
+}
+
+.lis{
+  display: flex;
+  margin-bottom: 10px;
+  justify-content:space-around;
+  white-space: normal;
+  border-radius: 8px;
+  color: black;
+  background-color: aquamarine;
+  width: 100%;
+  padding: 20px;
+}
+
+@media screen and (max-width: 720px) {
+  .lists {
+    display: flex;
+    width: 80%;
+  }
 }
 .input{
   width: 150px;

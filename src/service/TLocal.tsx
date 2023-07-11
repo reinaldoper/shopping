@@ -11,4 +11,5 @@ export interface Local {
   thumbnail: string,
   images: string[],
   value: string,
+  qtd: number,
 }

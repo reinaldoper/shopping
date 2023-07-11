@@ -39,12 +39,37 @@ export default function Car() {
     navigateTo('/');
   }
 
+  // delete item
+  const deleteId = (id: string): void => {
+    if (Array.isArray(local)) {
+      const newItems = local.filter((item) => Number(item.id) !== Number(id));
+      localStorage.setItem('search', JSON.stringify(newItems));
+    }
+    const store = localStorage.getItem('search');
+      // Verificar se store é nulo e converter para uma string vazia
+      const storeValue = store !== null ? store : '';
+  
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+      void setLocal(JSON.parse(storeValue));
+  };
+
+  const resultLocal = local.map((item: Local) => (
+    <div key={item.id} className={style.lis}>
+      <li><strong>Id: </strong>{item.id}</li>
+      <li><strong>Brand: </strong>{item.brand}</li>
+      <li><strong>Price: </strong>{item.price}R$</li>
+      <li><strong>Qtd: </strong>{item.qtd}</li>
+      <li><button type='button' onClick={() => deleteId(item.id)}>DEL</button></li>
+    </div>
+  ))
+
   return (
     <div>
       <button onClick={returnRouterHome} className={style.button}>Home</button>
       <button onClick={Close} className={style.button}>Close</button>
-      <h1>Total a pagar</h1>
+      <h2>Total a pagar</h2>
       {local.length > 0 ? <h2>Total: {soma().toFixed(2)}R$</h2> : null}
+      <ol className={style.lists}>{resultLocal}</ol>
     </div>
   )
 }

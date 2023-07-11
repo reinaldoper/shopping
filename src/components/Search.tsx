@@ -50,7 +50,7 @@ export default function Search() {
       const items: string[] = typeof existingItems === 'string' ? JSON.parse(existingItems) : [];
 
 
-      const newItems = [...items, { ...search, value: Number(final.toFixed(2)) }];
+      const newItems = [...items, { ...search, value: Number(final.toFixed(2)), qtd: Number(count) }];
       localStorage.setItem('search', JSON.stringify(newItems));
     } else {
       null;
