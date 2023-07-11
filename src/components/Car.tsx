@@ -65,6 +65,7 @@ export default function Car() {
 
   return (
     <div>
+      <h1 className={style.font}>CART_ITEM</h1>
       <button onClick={returnRouterHome} className={style.button}>Home</button>
       <button onClick={Close} className={style.button}>Close</button>
       <h2>Total a pagar</h2>
